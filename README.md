@@ -1,0 +1,1 @@
+This repository demonstrates an uncommon bug related to the improper use of innerHTML in HTML. The bug arises from concatenating multiple strings when setting the innerHTML of an element. While seemingly innocuous, this approach can create unexpected behavior and security risks.  The solution showcases a safer and more efficient alternative.
