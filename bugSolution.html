@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be replaced.
+  </div>
+  <script>
+    // Correct and safer way to use innerHTML. Create a DocumentFragment to improve performance and security.
+    let fragment = document.createDocumentFragment();
+    let para1 = document.createElement('p');
+    para1.textContent = 'This is a paragraph.';
+    let para2 = document.createElement('p');
+    para2.textContent = 'This is another paragraph.';
+    fragment.appendChild(para1);
+    fragment.appendChild(para2);
+    document.getElementById('myDiv').appendChild(fragment);
+  </script>
+</body>
+</html>
